@@ -231,6 +231,6 @@ def handle_search():
 
     cache[ticker] = stock_data
     return jsonify(stock_data)
-
+print("service running")
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001, debug=True)
