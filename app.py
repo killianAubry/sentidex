@@ -99,6 +99,7 @@ def get_yfinance_data(ticker):
 
 
 def calculate_predictions(ticker, current_price):
+    print("Computing...")
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
@@ -200,6 +201,7 @@ def calculate_predictions(ticker, current_price):
 
 @app.route('/search', methods=['POST'])
 def handle_search():
+    print("New Request")
     data = request.get_json()
     ticker = data.get('ticker', '').upper().strip()
 
